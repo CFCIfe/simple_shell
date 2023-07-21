@@ -1,6 +1,10 @@
 # simple_shell
 A simple shell group project with Soukaina Sadeq for the ALX SE Program
 
+### Run the following
+
+`bash ./hack/generate-authors.sh `
+
 ### ChatGPT Prompt
 
 An outline of the steps and features you need to implement to create a basic shell.
