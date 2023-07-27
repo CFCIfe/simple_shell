@@ -6,5 +6,6 @@
 #include <unistd.h>
 
 #define MAX_INPUT_LENGTH 1024
+#define PROMPT "#Sadqe&Peter$ "
 
 #endif /* MAIN_H */

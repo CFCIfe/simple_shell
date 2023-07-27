@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "main.h"
 
-#define PROMPT "#Sadqe&Peter$ "
 /**
  * main - Entry point of the simple shell.
  *
