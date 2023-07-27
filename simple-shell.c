@@ -1,22 +1,18 @@
 #include "main.h"
 
-/**
- * main - Entry point of the simple shell.
- *
- * Return: Always 0.
- */
+#define PROMPT "#Sadqe&Peter$ "
+
 int main(void)
 {
 char buffer[1024];
 ssize_t n;
-char *argv[2];
+char *token;
 
 while (1)
 {
-write(STDOUT_FILENO, PROMPT, 16);
+write(STDOUT_FILENO, PROMPT, sizeof(PROMPT) - 1);
 
-n = read(STDIN_FILENO, buffer, sizeof(buffer));
-if (n == -1)
+if ((n = read(STDIN_FILENO, buffer, sizeof(buffer))) == -1)
 {
 perror("read");
 exit(EXIT_FAILURE);
@@ -28,19 +24,16 @@ write(STDOUT_FILENO, "\n", 1);
 break;
 }
 
-if (buffer[n - 1] == '\n')
 buffer[n - 1] = '\0';
 
-argv[0] = buffer;
-argv[1] = NULL;
-
-if (execve(buffer, argv, NULL) == -1)
+token = my_strtok(buffer, " ");
+while (token != NULL)
 {
-perror(buffer);
+int exit_status = my_system(token);
+printf("Command exit status: %d\n", exit_status);
+token = my_strtok(NULL, " ");
+}
 }
 
-write(STDOUT_FILENO, "\n", 1);
-}
-
-return (0);
+return 0;
 }

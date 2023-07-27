@@ -1,5 +1,5 @@
 # simple_shell
-A simple shell group project with Soukaina Sadeq for the ALX SE Program
+A simple shell group project with [Soukaina Sadeq](https://github.com/soukainasadeq) for the ALX SE Program
 
 ### Run the following
 

@@ -3,9 +3,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
-#define MAX_INPUT_LENGTH 1024
-#define PROMPT "#Sadqe&Peter$ "
+char *my_strtok(char *str, const char *delimiters);
+int my_system(const char *command);
 
 #endif /* MAIN_H */
